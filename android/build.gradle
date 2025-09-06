@@ -1,3 +1,26 @@
+// allprojects {
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+// }
+
+// rootProject.buildDir = "../build"
+// subprojects {
+//     project.buildDir = "${rootProject.buildDir}/${project.name}"
+// }
+// subprojects {
+//     project.evaluationDependsOn(":app")
+// }
+// dependencies {
+//     classpath "com.android.tools.build:gradle:8.3.2"
+// }
+
+// tasks.register("clean", Delete) {
+//     delete rootProject.buildDir
+// }
+// Top-level build.gradle
+
 allprojects {
     repositories {
         google()
@@ -6,10 +29,9 @@ allprojects {
 }
 
 rootProject.buildDir = "../build"
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
     project.evaluationDependsOn(":app")
 }
 
